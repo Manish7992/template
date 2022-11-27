@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-rancher
+  namespace: nginx
+spec:
+  selector:
+    matchLabels:
+      app: hello
+  replicas: 2 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: hello
+    spec:
+      containers:
+      - name: nginx
+        image: manish8757/rancher:1a4353cb968a5aa25156dcd65903c99eb83e1a2e
+        ports:
+        - containerPort: 8080
