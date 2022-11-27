@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: manish8757/rancher:708ec0a232ffb46ee12d203e9a8f058b26a2d388
+        image: manish8757/rancher:6aa835d7e440c7e8f4ec54bf25a4fe34b1776ff3
         ports:
         - containerPort: 8080
